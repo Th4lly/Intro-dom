@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <title> Explorando o DOM </title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" 
+rel="stylesheet">
+
+    <link rel="stylesheet" href="/style.css">
+
+</head>
+<body>
+    
+<header class="header">
+    <nav aria-label="Navegação principal">
+        <a href="index.html"class="logo"> Logo </a>
+
+        <button type="button" class="menu-toggle" id="menu-toggle" aria-label="Abrir Menu" aria-expanded="false"
+         aria-controls="menua"> 
+
+        <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path fill-rule="evenodd" 
+            clip-rule="evenodd" d="M21 5.5H3V7h18V5.5Zm0 5.75H3v1.5h18v-1.5ZM3 17h18v1.5H3V17Z" 
+            fill="currentColor"/>
+        </svg>
+
+        </button>
+
+        <ul class="menu" id="menu">
+           <li> <a href="#inicio"> Inicio </a> </li>
+           <li> <a href="#sobre"> Sobre </a> </li>
+           <li> <a href="#servicos"> Serviços </a> </li>
+           <li> <a href="#contato"> Contato </a> </li>
+        </ul>
+    </nav>
+</header>
+
+<dialog class="modal" id="modal" open>
+        <div class="modal-content">
+            <button type="button" class="modal-close" id="modal-close" aria-label="Fechar modal">
+                X
+            </button>
+
+            <h2> Bem-vind@! </h2>
+            <p> Inscreva-se para receber novidades, conteúdos e atualizações! </p>
+
+            <form class="modal-form">
+                <div class="form-group">
+                    <label for="nome"> Nome </label>
+                    <input type="text" id="nome" name="nome" placeholder="Ex: Ana Silva" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email"> Email </label>
+                    <input type="email" id="email" name="email" placeholder="Ex: email@email.com" required>
+                </div>
+
+                <button type="submit" class="modal-submit"> Inscrever-se </button>
+            </form>
+        </div>
+    </dialog>
+    
+<script src="js/menu-hamburguer.js"></script>
+<script src="/js/modal.js"></script>
+</body>
+</html>

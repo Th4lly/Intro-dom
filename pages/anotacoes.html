@@ -36,8 +36,8 @@
             max-width: 56.25rem;
             margin: 3rem auto;
             padding: 0 1rem;
-            text-align: center;
         }
+        
         section {
             background-color: #fff8f8;
             padding: 2rem;
@@ -55,7 +55,7 @@
             text-align: center;
             font-size: 0.9rem;
             color: #555;
-            margin-top: 1rem 0;
+            margin: 1rem 0;
         }
         
         ul {
@@ -138,26 +138,51 @@
         <p> &copy; Todos os direitos reservados - Thallyta | 2026 </p>
     </footer>
 
-    <!-- Área de testes 🥳 -->
-     <script>
-        // capturando/selecionando elementos
-        const tituloPrincipal = document.getElementById('titulo-principal');
-        
+     <!-- Área de testes 🥳 -->
+      
+    <script>
+        // Capturando/selecionando elementos
+        const tituloPrincipal = document.getElementById("titulo-principal");
+
         // Alterando o conteúdo do título principal
         tituloPrincipal.textContent = "Turma SP18 - Aprendendo DOM";
-        
 
-        // Capturando elemento com outro método
+        // Capturando elementos com outro método
+
         // Busca o primeiro elemento que corresponde ao seletor
-        const section = document.querySelector("section")
-        //  const section = document.querySelector(".section")
-        //    const section = document.querySelector("#section")
+        const section = document.querySelector("section");
+        // const header = document.querySelector(".section");
+        // const header = document.querySelector("#section");
 
-        section.style.backgroundColor = "#f4f4f4";
+        section.style.backgroundColor = "#d98252";
 
+        // Busca todos os elementos que correspondem ao seletor
         const sections = document.querySelectorAll("section");
         console.log(sections);
-     </script>
+
+        // Usamos o forEach para percorrer os elementos de um array, executando uma função para cada elemento
+        sections.forEach(function (section) {
+            section.style.backgroundColor = "#EBD5C5";
+            section.style.border = "8px solid #C58B72";
+        });
+
+
+        // Criando elementos com JavaScript
+        // 1 - Capturando elemento
+        const lista = document.querySelector("#lista");
+
+        // 2 - Criando elemento 
+        const itemDaLista = document.createElement("li")
+
+        // 3 - Passando conteúdo para o elemento
+        itemDaLista.textContent = "Aproveitar promoçao de batons da MAC";
+
+        // 4 - Inserindo o elemento na Lista
+        // O método appendChild serve para anexarmos/inserirmos itens em um determinado espaço/elemento
+        lista.appendChild(itemDaLista);
+
+        lista.remove()
+    </script>
 </body>
 
 </html>
